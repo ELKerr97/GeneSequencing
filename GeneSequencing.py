@@ -11,6 +11,7 @@ else:
 	raise Exception('Unsupported Version of PyQt: {}'.format(PYQT_VER))
 
 import random
+from Cell import Cell
 
 # Used to compute the bandwidth for banded version (d)
 MAXINDELS = 3
@@ -35,7 +36,7 @@ class GeneSequencing:
 
 ###################################################################################################
 # your code should replace these three statements and populate the three variables: score, alignment1 and alignment2
-		score = random.random()*100;
+		score = random.random()*100
 		alignment1 = 'abc-easy  DEBUG:({} chars,align_len={}{})'.format(
 			len(seq1), align_length, ',BANDED' if banded else '')
 		alignment2 = 'as-123--  DEBUG:({} chars,align_len={}{})'.format(
@@ -43,3 +44,5 @@ class GeneSequencing:
 ###################################################################################################
 
 		return {'align_cost':score, 'seqi_first100':alignment1, 'seqj_first100':alignment2}
+
+	
