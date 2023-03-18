@@ -1,6 +1,7 @@
 class Cell:
     value = None
     back_pointer = None
+    operation = None
 
     def __init__(self, value=None, back_pointer=None, operation=None):
         # Keep track of the cell value
@@ -8,4 +9,4 @@ class Cell:
         # Track the back pointer (another Cell)
         self.back_pointer = back_pointer
         # operation
-        self.operation = -1
+        self.operation = None
